@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    .login-aynaa{
+            text-decoration: none;
+            color: rgb(211, 36, 36);
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+    }
+    .login-box{
+        background: linear-gradient(90deg, #007bff, #00c6ff);
+            /* Gradient fon */
+            margin-top: 20px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .login-box:hover{
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+    }
+    .login-aynaa:hover{
+        color: black;
+    }
+</style>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+
+    <div class="login-box">
+        <a class="login-aynaa" href="{% url 'login' %}">Login</a>
+
+    </div> 
+
+    <h1>Bu bosh sahifa</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam voluptas veritatis sequi, distinctio repudiandae consectetur, quod explicabo iure ut a, placeat ullam deleniti eius eligendi numquam! Nulla officia deleniti voluptatum.</p>
+    <a href="{% url 'sahifa' %}">Sahifa</a>
+    {% endblock content %}
+    
+</body>
+</html>

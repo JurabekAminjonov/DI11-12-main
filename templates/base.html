@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Header dizayni */
+        header {
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            /* Gradient fon */
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        /* Navigatsiya tugmalari */
+        header a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+    
+        /* Hover effekti */
+        header a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+    
+        /* Mobil moslashuv */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+    
+            header a {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+        .login-ayna{
+            padding-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'home'%}">Home page</a>
+        <a href="{% url 'about' %}">About</a> 
+        <a class="login-ayna" href="{% url 'login' %}">Login</a>
+        
+    </header>
+    {% block content %}
+
+    {% endblock content %}
+
+</body>
+</html>
